@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="text/javascript" src="/homey.js"></script>
+</head>
+<body>
+  <div class="homey-form">
+    <div class="homey-form-group">
+      <label class="homey-form-label" for="url">IoTaWatt URL</label>
+      <input class="homey-form-input" type="text" id="url" placeholder="http://iotawatt.local" value="http://iotawatt.local" />
+    </div>
+    <button class="homey-button homey-button-primary" id="submit">Connect</button>
+  </div>
+
+  <script>
+    var urlInput = document.getElementById('url');
+    var submitBtn = document.getElementById('submit');
+
+    submitBtn.addEventListener('click', function() {
+      var url = urlInput.value.trim();
+      if (!url) {
+        return Homey.alert('Please enter the IoTaWatt URL');
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Connecting...';
+
+      Homey.emit('url', { url: url })
+        .then(function() {
+          return Homey.showView('list_devices');
+        })
+        .catch(function(err) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Connect';
+          Homey.alert(err.message || 'Failed to connect to IoTaWatt');
+        });
+    });
+  </script>
+</body>
+</html>

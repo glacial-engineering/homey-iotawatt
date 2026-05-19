@@ -1,0 +1,6 @@
+{
+  "app": {
+    "name": "IoTaWatt",
+    "description": "Monitor energy usage from IoTaWatt devices"
+  }
+}
