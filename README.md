@@ -2,6 +2,10 @@
 
 Athom Homey smart-home app to monitor energy usage from [IoTaWatt](https://iotawatt.com/) devices.
 
+## AI Development Disclosure
+
+This app was coded almost entirely with AI assistance and reviewed lightly. The architectural guidance was sound and provided by a developer with more than 30 years of experience.
+
 ## Features
 
 - Discovers all CT input channels and Watt outputs from your IoTaWatt

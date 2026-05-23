@@ -1,22 +1,38 @@
 {
   "id": "com.glacialengineering.homey.iotawatt",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "compatibility": ">=5.0.0",
   "sdk": 3,
+  "platforms": ["local"],
+  "brandColor": "#0D9488",
   "name": {
     "en": "IoTaWatt"
   },
   "description": {
-    "en": "Monitor energy usage from IoTaWatt devices"
+    "en": "Keep your home's energy consumption in clear sight"
   },
   "category": [
     "energy"
   ],
+  "tags": {
+    "en": ["energy", "power", "monitoring", "electricity", "iotawatt"]
+  },
+  "images": {
+    "small": "/assets/images/small.png",
+    "large": "/assets/images/large.png",
+    "xlarge": "/assets/images/xlarge.png"
+  },
   "permissions": [],
   "author": {
     "name": "Glacial Engineering",
     "email": "github@glacial.engineering"
   },
+  "source": "https://github.com/glacial-engineering/homey-iotawatt",
+  "homepage": "https://github.com/glacial-engineering/homey-roku",
+  "bugs": {
+    "url": "https://github.com/glacial-engineering/homey-iotawatt/issues"
+  },
+  "support": "mailto:github@glacial.engineering",
   "drivers": [
     {
       "id": "energy-device",
@@ -25,6 +41,13 @@
       },
       "class": "sensor",
       "icon": "/assets/icon.svg",
+      "platforms": ["local"],
+      "connectivity": ["lan"],
+      "images": {
+        "small": "/drivers/energy-device/assets/images/small.png",
+        "large": "/drivers/energy-device/assets/images/large.png",
+        "xlarge": "/drivers/energy-device/assets/images/xlarge.png"
+      },
       "capabilities": [
         "measure_power",
         "meter_power"
@@ -35,7 +58,8 @@
         }
       },
       "energy": {
-        "cumulative": true
+        "cumulative": true,
+        "cumulativeImportedCapability": "meter_power"
       },
       "settings": [
         {
