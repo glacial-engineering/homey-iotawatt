@@ -1,3 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" fill="currentColor">
-  <path d="M260 20 L120 280 L220 280 L180 480 L380 220 L280 220 Z" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- gauge dial -->
+  <circle cx="250" cy="250" r="185" fill="none" stroke="currentColor" stroke-width="28"/>
+  <!-- tick marks -->
+  <path d="M250 65 V105" stroke="currentColor" stroke-width="22" stroke-linecap="round"/>
+  <path d="M435 250 H395" stroke="currentColor" stroke-width="22" stroke-linecap="round"/>
+  <path d="M65 250 H105" stroke="currentColor" stroke-width="22" stroke-linecap="round"/>
+  <path d="M119 119 L147 147" stroke="currentColor" stroke-width="22" stroke-linecap="round"/>
+  <path d="M381 119 L353 147" stroke="currentColor" stroke-width="22" stroke-linecap="round"/>
+  <!-- lightning-bolt needle sweeping up-right -->
+  <path d="M250 250 L318 150 L282 168 L330 108" fill="none" stroke="currentColor" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- hub -->
+  <circle cx="250" cy="250" r="24" fill="currentColor"/>
 </svg>
